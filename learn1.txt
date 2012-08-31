@@ -1,1 +1,2 @@
 trying to add n commit my first file into git repo. i am able to commit into public repo as i m user of this repo now.
+it's working, great!!
