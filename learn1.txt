@@ -1,1 +1,2 @@
 trying to add n commit my first file into git repo.
+it's working, great!!
