@@ -4,4 +4,4 @@ This file is to resolve conflicts.
 Preeti..and jaspreet dhingra...
 
 Preeti....and...jaspreet!!
-checking for diff.
+diff
