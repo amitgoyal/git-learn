@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+  "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr">
+   <head>
+     <title> js_form_validation : Preeti Grover </title>
+     <link rel = "stylesheet" type = "text/css" href = "stylesheet.css"/>  
+     <script type = "text/javascript" src = "action.js"></script>
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>     
+   </head> 
+   <body>
+    <!--Opening an html form-->   
+    <form  method = "post" name = "main_form">
+      <fieldset>
+        <div id="userid" class="form_container">
+        <label>User Id:</label><input type="text" name="u_id" class="form_element" value="" onblur="userid_validation()"/> 
+        </div> 
+        <div id="password" class="form_container">
+          <label>Password:</label><input type="Password" name="u_password" class="form_element" value="" onblur="password_validation()"/> 
+        </div>
+        <div id="name" class="form_container">
+          <label>Name:</label><input type="text" name="u_name" class="form_element" value="" onblur="name_validation()"/> 
+        </div> 
+        <div id="dob" class="form_container">
+          <label>Date of Birth:</label><input type="text" name="u_date" class="form_element" value="" id="date" onblur="date_validation()"/><input type="text" name="u_month" class="form_element" value="" id="month" onblur="month_validation()"/><input type="text" name="u_year" class="form_element" value="" id="year" onblur="year_validation()"/> 
+        </div>
+        <div id="gender" class="form_container">
+          <label>Gender:</label><input type="radio" name="u_gender" class="form_element" value="male"/>Male
+                                 <input type="radio" name="u_gender" class="form_element" value="female"/>Female
+        </div>
+        <div id="email" class="form_container">
+          <label>Email:</label><input type="text" name="u_email" class="form_element" value="" onblur="email_validation()" /> 
+        </div>           
+        <div id="address" class="form_container">
+          <label>Address</label><textarea name="u_address" class="form_element" onblur="address_validation()"></textarea> 
+        </div>
+        <div id="country" class="form_container">
+          <label>Country:</label><select class="form_element"><option>India</option><option>U.K</option><option>U.S.A</option><option>Russia</option><option>Germany</option></select>
+        </div>
+        <div id="phone" class="form_container">
+          <label>Phone:</label><input type="text" name="u_code" class="form_element" value="" id="country_code" onblur="code_validation()"/><input type="text" name="u_phone" class="form_element" value="" id="contact_no" onblur="phone_validation()"/>
+        </div>
+        <div id="language" class="form_container">
+          <label>Language:</label><input type="checkbox" name="u_language" class="form_element" value="english"/>English<input type="checkbox" name="u_language" class="form_element" value="non-english"/>Non-English
+        </div>
+        <div id="image" class="form_container">
+          <label>Upload Photo:</label><input type="file" name="u_photo" class="form_element" id="file" />
+        </div> 
+        <div id="submit" class="operation">
+          <input type="submit" name="submit_form" value="Submit" class="button"  />
+        </div>
+      </fieldset>
+    </form>  
+  </body>
+</html>
+    
+        
