@@ -1,0 +1,9 @@
+body{padding:0; margin:0; font-family: Arial, "trebuchetMS", sans-serif; font-size:16px; color:#494949; line-height: 1.5em;}                
+fieldset{width:550px;margin:30px auto}     
+label{float:left;width:35%;margin-left:35px;} 
+legend{text-align: center;alignment-adjust: middle;}
+.form_container{margin-top:15px;}   
+.input_element{width:50%;text-align:center;margin-left:150px;padding:10px;}
+.form_element{width:auto;margin-left:10px;background-color: white;}
+.small_container{width:30px;height:20px;}
+
