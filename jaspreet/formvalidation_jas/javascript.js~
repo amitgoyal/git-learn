@@ -1,40 +1,38 @@
 function validateName()
 {
-var name=document.form1.firstname.value;
-if (name==null || name=="")
-  {
+var name = document.form1.firstname.value;
+if (name == null || name == "") {
   alert("Name name must be filled out");  
   return false();
 } 
-  var pattern=/^[a-z\.\_-]{3,30}$/;
-  if(pattern.test(name) == false){
+  var pattern = /^[a-z\.\_-]{3,30}$/;
+  if(pattern.test(name) == false) {
       alert("Inavalid format for name");
       }
     }
 
 function validateAge()
 {
-var age=document.form1.num.value;
-if (age==null || age=="")
+var age = document.form1.num.value;
+if (age == null || age == "")
   {
   alert("Age name must be filled out"); 
   return false();
   }
-if(age>120 || isNaN(age)) {
+if(age > 120 || isNaN(age)) {
     alert("Enter a valid age");
    }  
 }
 
 function validateAddress()
 {
-var address=document.form1.adrs.value;
-if (address==null || address=="")
-  {
+var address = document.form1.adrs.value;
+if (address == null || address == "") {
   alert("Address name must be filled out"); 
    return false();
 }
-var len=address.length;
-if (len<10 || len>500) {
+var len = address.length;
+if (len < 10 || len > 500) {
     alert("Address is out of limit(lower/upper)");  
     return false();
    }
@@ -42,37 +40,34 @@ if (len<10 || len>500) {
 
 function validateEmail()
 {
-var mail=document.form1.mail_adrs.value;
-var atpos=mail.indexOf("@");
-var dotpos=mail.lastIndexOf(".");
-if (mail==null || mail=="")
-  {
+var mail = document.form1.mail_adrs.value;
+var atpos = mail.indexOf("@");
+var dotpos = mail.lastIndexOf(".");
+if (mail == null || mail == "") {
   alert("E-mail name must be filled out");
   return false();  
 }
-  if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
-  {
+  if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
   alert("Not a valid e-mail address");
   }
 }
 
 function validatecc()
 {
-var code=document.form1.countrycode.value;
-if (code==null || code=="")
-  {
+var code = document.form1.countrycode.value;
+if (code == null || code == "") {
   alert("Country code must be filled out");
   return false();
   }
-if(code>999 || code<99 || isNaN(code)){
+if(code > 999 || code < 99 || isNaN(code)) {
     alert("Invalid Country Code has been entered!")  
 }
 }
+
 function validatePhoneNumber()
 {
-var number=document.form1.fne_num.value;
-if (number==null || number=="")
-  {
+var number = document.form1.fne_num.value;
+if (number == null || number == "") {
   alert("Phone number must be filled out");
   return false();
   }
@@ -89,19 +84,13 @@ var selectboxObj = document.form1.fav_clr.value;
         alert ("Select atleast something");
     }
 
-    /*var selectedOption = selectboxObj.options[selectboxObj.selectedIndex];
-    var selectedValue = selectedOption.value;
-    var selectedText = selectedOption.text;
-
-    if (retType=='text'){return selectedText}
-    return selectedValue*/
 }
 
 function validateImage()
 {
 alert("validating image");
-var uploadcontrol=document.form1.img.value;
-var reg=/^(([a-zA-Z]:)|(\\{2}\w+)\$?)(\\(\w[\w].*))+(.jpg|.JPG|.gif|.GIF| .png|.PNG)$/;
+var uploadcontrol = document.form1.img.value;
+var reg = /^(([a-zA-Z]:)|(\\{2}\w+)\$?)(\\(\w[\w].*))+(.jpg|.JPG|.gif|.GIF| .png|.PNG)$/;
 if (uploadcontrol == "" || uploadcontrol == null) {
     alert("Image cannot be empty!");
    return false();

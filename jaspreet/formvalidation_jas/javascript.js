@@ -2,7 +2,7 @@ function validateName()
 {
 var name = document.form1.firstname.value;
 if (name == null || name == "") {
-  alert("Name name must be filled out");  
+  alert("Name must be filled out");  
   return false();
 } 
   var pattern = /^[a-z\.\_-]{3,30}$/;
@@ -16,7 +16,7 @@ function validateAge()
 var age = document.form1.num.value;
 if (age == null || age == "")
   {
-  alert("Age name must be filled out"); 
+  alert("Age must be filled out"); 
   return false();
   }
 if(age > 120 || isNaN(age)) {
@@ -28,7 +28,7 @@ function validateAddress()
 {
 var address = document.form1.adrs.value;
 if (address == null || address == "") {
-  alert("Address name must be filled out"); 
+  alert("Address must be filled out"); 
    return false();
 }
 var len = address.length;
@@ -44,7 +44,7 @@ var mail = document.form1.mail_adrs.value;
 var atpos = mail.indexOf("@");
 var dotpos = mail.lastIndexOf(".");
 if (mail == null || mail == "") {
-  alert("E-mail name must be filled out");
+  alert("E-mail must be filled out");
   return false();  
 }
   if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
