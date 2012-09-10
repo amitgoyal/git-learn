@@ -1,0 +1,45 @@
+body {
+    padding: 0;
+    margin: 0; font-family: Arial, "trebuchetMS", sans-serif; 
+    font-size: 16px; 
+    line-height: 1.5em;
+}
+fieldset {
+    width: 550px;
+    margin: 10px auto;
+}   
+label {
+    float: left;
+    width: 30%;
+}
+.form_element {
+    width: 60%;
+    margin-left: 10px;
+}
+.form_container {
+    margin: 20px;
+}
+#date{
+   width: 8%;
+}
+#month {
+   width: 8%;  
+}
+#year {
+    width: 15%;
+}
+#country_code {
+    width: 15%;
+}
+#contact_no {
+    width: 30%;
+}
+#radio1, #radio2, #check1, #check2, #check3 {
+    width: 10% !important;
+    margin-left: 10px;
+}
+.operation {
+    float: left;
+    margin: 20px 10px;
+    width: auto;
+}
