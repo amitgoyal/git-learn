@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html>  
+   <head>
+     <title> js_calculator : Preeti Grover </title>
+     <link rel = "stylesheet" type = "text/css" href = "js_calculator.css"/>  
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+     <script type = "text/javascript" src = "js_calculator.js"></script>
+   </head> 
+   <body>
+    <!--Opening an html form-->   
+    <form  method = "post" name = "calculator_form">
+      <fieldset>
+        <!--Input first number-->
+        <div id = "first" class = "form_container">
+        <label> First Number: </label> <input type = "text" name = "first_num" class = "form_element" value = "" /> 
+        </div>
+        
+        <!--Input second number-->
+        <div id = "second" class="form_container">
+        <label> Second Number: </label> <input type = "text" name = "second_num" class = "form_element" value = "" onblur = "returncheck_validation()"/> 
+        </div>
+          
+        <!--Result is displayed here-->  
+        <div id = "result" class = "form_container">
+        <label> Result </label><input type = "text" name = "result" class = "form_element" value = "" /> 
+        </div>             
+       
+        <!--Button for addition-->
+        <div id = "add" class = "operation_container">
+        <input class = "input_element" type = "button" name = "addition" value = "Add" onclick = "add()" />
+        </div>
+        
+        <!--Button for subtraction-->
+        <div id = "sub" class = "operation_container">
+        <input class = "input_element" type = "button" name = "subtraction" value = "Subtract " onclick = "subtract()"/>
+        </div> 
+        
+        <!--Link for multiplication-->
+        <div id = "mul" class = "operation_container">
+        <a href = "#" onclick = "multiply(); return false();"> Multiply </a>
+        </div>
+        
+        <!--Link for division-->
+        <div id="div" class = "operation_container">
+        <a href = "#" onclick = "divide(); return false();"> Division </a>
+        </div>
+         
+      
+         <!--Button to reset text fields--> 
+        <div id = "reset" >
+        <input class = "input_element" type = "reset" name = "reset" value ="Reset" />
+        </div> 
+      </fieldset>  
+    </form>
+   </body>
+ </html>
