@@ -3,34 +3,34 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr">
   <head>
-      
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <title>FORM VALIDATION</title>
        <link rel = "stylesheet" type = "text/css" href = "stylesheet.css"/>     
    </head>   
    <body>
     <script type = "text/javascript" src = "javascript.js"> </script> 
-    <form  action="index.php" method = "post" name = "form1" >
+    <form  action="index.html" method = "post" name = "form1" onsubmit="display(); return false;">
       <fieldset><legend>FORM</legend>
         <div class = "form_container">
-          <label> NAME:</label> <input type = "text" class = "form_element" id="firstname" onblur="validateName()"/> 
+          <label> NAME:</label> <input type = "text" class = "form_element" id="firstname" /> 
         </div>
         <div class="form_container">
-            <label>AGE: </label> <input type = "text" class = "form_element" id = "num" onblur="validateAge()"/> 
+            <label>AGE: </label> <input type = "text" class = "form_element" id = "num" /> 
         </div> 
         <div  class = "form_container">
-            <label> ADDRESS:</label><textarea id="adrs" class="form_element"rows="10" cols="30" onblur="validateAddress()" ></textarea>
+            <label> ADDRESS:</label><textarea id="adrs" class="form_element" rows="10" cols="30"></textarea>
         </div>             
         <div  class = "form_container">
-            <label> E-MAIL:</label><input type = "text" class = "form_element" id = "mail_adrs" onblur="validateEmail()"/> 
+            <label> E-MAIL:</label><input type = "text" class = "form_element" id = "mail_adrs"/> 
         </div>             
         <div  class = "form_container">
-            <label> PHONE NUMBER:</label><input type = "text" class="small_container form_elemnt" id = "countrycode" onblur="validatecc()" /><input type = "text" class="form_element" id = "fne_num" onblur="validatePhoneNumber()" />           
+            <label> PHONE NUMBER:</label><input type = "text" class="small_container form_elemnt" id = "countrycode"/><input type = "text" class="form_element" id = "fne_num" />           
         </div>             
         <div  class = "form_container">
-            <label> IMAGE:</label><input type = "file" id = "img" class="small_container"  onblur="validateImage()" /> 
+            <label> IMAGE:</label><input type = "file" id = "img" class="small_container"  /> 
         </div>             
         <div  class = "form_container">
-            <label> FAVOURITE COLOR:</label><select name ="favoutite colour" id="fav_clr" class="form_element"  onblur="validatecolor()">
+            <label> FAVOURITE COLOR:</label><select name ="favoutite colour" id="fav_clr" class="form_element" >
                 <option value="">Select...</option>
                 <option value="Black">Black</option>
                     <option value="Red">Red</option>
@@ -48,7 +48,7 @@
             <input type="radio" name="sex" value="female" class="form_element" id="f"/> Female
         </div>             
         <div  class = "form_container">
-            <input type = "submit" class = "input_element" id = "sbmt"  value="SUBMIT" /> 
+            <input type = "submit" class = "input_element" id = "sbmt"  value="SUBMIT" onclick=" return validateform()"/> 
         </div>                 
       </fieldset>
     </form>
