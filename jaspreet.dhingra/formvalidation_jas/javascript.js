@@ -111,5 +111,7 @@ function validateform() {
     validatePhoneNumber();
     validateimage();
     validatecolor();
-    return false;
+    display();
+    return false; 
 }
+

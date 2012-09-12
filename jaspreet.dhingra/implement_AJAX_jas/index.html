@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script>
+ function showHint(str)
+ {
+ var xmlhttp;
+ if (str.length==0)
+   { 
+   document.getElementById("txtHint").innerHTML="";
+   return;
+   }
+ if (window.XMLHttpRequest)
+   { // code for IE7+, Firefox, Chrome, Opera, Safari
+   xmlhttp=new XMLHttpRequest();
+   }
+ xmlhttp.onreadystatechange=function()
+   {
+   if (xmlhttp.readyState==4 && xmlhttp.status==200)
+     {
+     document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+     }
+   }
+ xmlhttp.open("GET","gethint.php?q="+str,true);
+ xmlhttp.send();
+ }
+ </script>
+</head>
+<body>
+<h3>Type desired username in the field below:</h3>
+<form action="index.html" name="form"> 
+Enter User Name: <input type="text" id="txt1" onblur="showHint(this.value)" /><input type="button" value="check availability" />
+</form>
+<p>Availability: <span id="txtHint"></span></p> 
+</body>
+</html>
+
