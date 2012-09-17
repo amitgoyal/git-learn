@@ -1,0 +1,26 @@
+body{padding:0; margin:0; font-family: Arial, "trebuchetMS", sans-serif; font-size:16px; color:#494949; line-height: 1.5em;}
+#welcome_wrapper{margin:50px auto; width: 900px;}
+#wrapper {width: 974px; margin: 50px auto; border-top: 2px solid #000; height: 470px; background-color:pink;}
+.heading, .action{float:left;border-bottom: 2px solid #000;border-right:1px solid #000;text-align: center;font-weight: bold;height: 30px;font-size: 18px;}
+#id {width: 50px;border-left: 2px solid #000;}
+#name, #email{width: 250px;border-left: 1px solid #000;}
+#address {width: 250px;border-left: 1px solid #000;}
+.action {width: 80px;border-left: 1px solid #000;}
+.row_data, .row_action {float:left;border-bottom: 2px solid #000;border-right:1px solid #000;text-align: center;height: 20px;}
+.row_action {width: 80px;border-left: 1px solid #000;}
+#row_id {width: 50px;border-left: 2px solid #000;}
+#row_name, #row_email{width: 250px;border-left: 1px solid #000;}
+#row_address {width: 250px;border-left: 1px solid #000;}
+#login_form fieldset {width: 550px; margin: 100px auto;}
+#login_form .operation {float: left; margin: 20px 10px; width: auto;}
+.login_form_container {margin: 20px;}
+#login_form label {float: left; width: 20%;}
+.login_form_element {width: 60%; margin-left: 10px;}
+.login_form_operation{float:left; margin: 10px 10px;}
+#login_heading, #form_heading{text-align:center;}
+#login_heading_container{margin: 20px auto;}
+#user_form fieldset{width:550px;margin:50px auto;}   
+#user_form label{float:left;width:23%;}
+.form_element{width:400px;margin-left:10px;}
+.form_container{margin-bottom:15px;}
+.operation{float:left; margin: 10px 10px;}
