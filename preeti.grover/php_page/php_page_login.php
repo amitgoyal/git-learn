@@ -15,14 +15,14 @@
     <form  method = "post" name = "main_login_form" id="login_form"  action="php_page_authentication.php">
       <fieldset>
         <div id="username" class="login_form_container">
-        <label>User Name:</label><input type="text" name="u_username" class="login_form_element"/> 
+        <label>User Name:</label><input type="text" name="u_username" class="login_form_element" value=""/> 
         </div> 
         <div id="pass" class="login_form_container">
-          <label>Password:</label><input type="password" name="u_password" class= "login_form_element"/> 
+        <label>Password:</label><input type="password" name="u_password" class= "login_form_element" value=""/> 
         </div>
-          <div id="sign_up" class="login_form_operation">
-          <input type="submit" name="login_button" value="Log in"/>
-          </div>
+        <div id="sign_up" class="login_form_operation">
+        <input type="submit" name="login_button" value="Log in"/>
+        </div>
       </fieldset>
     </form> 
 </body>

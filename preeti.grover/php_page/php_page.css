@@ -19,6 +19,9 @@ body{padding:0; margin:0; font-family: Arial, "trebuchetMS", sans-serif; font-si
 .login_form_operation{float:left; margin: 10px 10px;}
 #login_heading, #form_heading{text-align:center;}
 #login_heading_container{margin: 20px auto;}
+#fail_container{margin: 20px 520px;}
+#logout_container{margin: 20px 520px;}
+#logout{margin: 20px 187px;}
 #user_form fieldset{width:550px;margin:50px auto;}   
 #user_form label{float:left;width:23%;}
 .form_element{width:400px;margin-left:10px;}
