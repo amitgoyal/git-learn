@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script type="text/javascript" src="jquery.js"></script>
+   <script>
+   $(document).ready(function(){
+   $(".button").click(function(){
+   txt = $("input").val();
+            $.ajax ( {            
+            type : "GET",
+            url : "gethint.php?txt="+txt,
+            success : function(result) {
+              $("span").html(result);   
+            },
+            error : function() {
+                alert("sorry");
+           }  
+        });
+     });
+  });
+</script>
+</head>
+<body>
+<h3>Type desired username in the field below:</h3>
+<form action = "main.html" name = "form"> 
+Enter User Name: <input type = "text" id="txt1" /><input type = "button" class = "button" value = "check availability" />
+</form>
+<p>Availability: <span id = "txtHint"></span></p> 
+</body>
+</html>
+
