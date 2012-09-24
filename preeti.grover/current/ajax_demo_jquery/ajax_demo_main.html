@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+  "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr">
+    <head>
+        <title>Ajax Jquery Implementation</title>
+        <link rel="stylesheet" type="text/css" href="php_page.css"/>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript">
+   $(document).ready(function(){
+   $(".button").click(function(){
+   value=$("input").val();
+        $.ajax ( {            
+            type:"GET",
+            url:"ajax_demo_action.php?txt="+value,
+            success:function(result) {
+              $("span").html(result);  
+            },
+            error:function() {
+                alert("Sorry, error in sending request");
+           }  
+        });
+     });
+  });
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+ <h1 class="heading"> AJAX DEMO JQUERY to display details of a User </h1>
+    <!--Opening an html form-->  
+<form action="ajax_demo_main.html" name="form">
+    <fieldset>
+    <label>Username</label><input type="text" id="u_name"/>
+    <input type="button" class="button" value="Fetch Record details"/>
+    </fieldset>
+    </form>
+<p>Details: <span id="check_details"></span></p> 
+</body>
+</html>

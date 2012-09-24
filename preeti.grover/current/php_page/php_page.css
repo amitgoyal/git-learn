@@ -1,0 +1,153 @@
+body {
+color:#494949;
+font-family:Arial, trebuchetMS, sans-serif;
+font-size:16px;
+line-height:1.5em;
+margin:0;
+padding:0;
+}
+
+#wrapper {
+background-color:#F5F5DC;
+border-top:2px solid #000;
+height:470px;
+width:974px;
+margin:50px auto;
+}
+
+#welcome {
+margin-left:615px;
+}
+
+#s_wrapper {
+border-top:2px solid #000;
+height:470px;
+width:974px;
+margin:50px auto;
+}
+
+.heading,.action {
+border-bottom:2px solid #000;
+border-right:1px solid #000;
+float:left;
+font-size:18px;
+font-weight:700;
+height:30px;
+text-align:center;
+background-color:olive;
+}
+
+#search_user {
+margin-left:90px;
+}
+
+.action {
+border-left:1px solid #000;
+width:80px;
+}
+
+.row_action {
+border-bottom:2px solid #000;
+border-left:1px solid #000;
+border-right:1px solid #000;
+float:left;
+height:20px;
+text-align:center;
+width:80px;
+}
+
+.row_id {
+border-bottom:2px solid #000;
+border-left:2px solid #000;
+border-right:1px solid #000;
+float:left;
+height:20px;
+text-align:center;
+width:50px;
+}
+
+#login_form fieldset {
+width:550px;
+margin:100px auto;
+}
+
+#login_form .operation {
+float:left;
+width:auto;
+margin:20px 10px;
+}
+
+.login_form_container {
+margin:20px;
+}
+
+#login_form label {
+float:left;
+width:20%;
+}
+
+.login_form_element {
+margin-left:10px;
+width:60%;
+}
+
+#login_heading,#form_heading,#display_heading {
+text-align:center;
+}
+
+#login_heading_container {
+margin:20px auto;
+}
+
+.user_form fieldset {
+width:550px;
+margin:65px auto;
+}
+
+.user_form label {
+float:left;
+width:23%;
+}
+
+.form_element {
+margin-left:10px;
+width:400px;
+}
+
+.form_container {
+margin-bottom:15px;
+}
+
+#id,#s_id {
+border-left:2px solid #000;
+width:50px;
+}
+
+#name,#email,#address,#s_name,#s_email,#s_address {
+border-left:1px solid #000;
+width:250px;
+}
+
+.row_name,.row_email,.row_address {
+border-bottom:2px solid #000;
+border-left:1px solid #000;
+border-right:1px solid #000;
+float:left;
+height:20px;
+text-align:center;
+width:250px;
+}
+
+.login_form_operation,.operation {
+float:left;
+margin:10px;
+}
+
+#fail_container,#logout_container,#search_fail_container {
+margin:20px 520px;
+}
+
+.logout,.navigation {
+width:10%;
+margin:20px 317px;
+}
