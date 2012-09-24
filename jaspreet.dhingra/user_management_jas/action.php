@@ -32,7 +32,10 @@ echo $_GET[msg];
             <input type="button" name="buttn" value="RANDOM" onclick="window.location = 'random.php';" />
             <input type="button" name="buttn" value="ADD USER" onclick="window.location = 'adduser.php';" />
                 <input type="button" name="logout" value="LOGOUT" onclick="window.location = 'logout.php';" />
-        <div class="sub_wrapper">
+                <form name="form2" method="get" action="search.php">
+                <input type="submit" name="submit" value="SEARCH" /><input type="text" name="search" value=""/>
+                </form>        
+                <div class="sub_wrapper">
             <div class="header">
                 <div class="heading">
                 <h5><u>USER ID</u></h5>    

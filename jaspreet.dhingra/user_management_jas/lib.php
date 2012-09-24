@@ -18,6 +18,7 @@ function select($uid)
 {
   mysql_query("select u_ename,u_email,u_phone,password from firstdb where u_id='$uid'");
 }
+
 function insertrandom()
 {
   $uname    = "junk";
