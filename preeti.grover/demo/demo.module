@@ -1,0 +1,85 @@
+<?php
+/*
+*implement hook_menu
+*/
+
+function demo_menu() {
+
+$items['magic'] = array(
+'title' => 'Menu magic',
+'page callback' => 'demo_basic',
+'access arguments' => array('access content'),
+); 
+  
+
+$items['preeti/%'] = array(
+'title' => 'menu magic even more',
+'page callback' => 'demo_basic_extra',
+'page agruments' => array(2),
+'access arguments' => array('access content'),
+'file' => 'demo.extra.inc',
+);
+
+$items['user/%/magic'] = array(
+'title' => 'User magic',
+'page callback' => 'demo_basic_user_tab',
+'page arguments' => array(1),
+'access arguments' => array('access content'),
+'file' => 'demo.user.inc',
+'type' => MENU_LOCAL_TASK,
+);
+  
+  //node_load(%)
+  $items['node/%node/magic']=array(
+      'title' => 'Abstract Tab',
+      'description' => 'This is for exploring cntextual menu links',
+      'page callback' => 'demo_node_context',
+      'page arguments' => array(1),
+      'access arguments' => array('access content'),
+      'file' => 'demo.context.inc',
+      'type' => MENU_LOCAL_TASK,
+      'context' => MENU_CONTEXT_PAGE | MENU_CONTEXT_INLINE,
+      );
+      return $items;
+}
+function demo_basic() {
+$content=array();
+$content['raw_markup']=array(
+'#type' => 'markup',
+'#markup' => 'First Custom Module',
+    '#prefix' => '<p>',
+    '#suffix' => '</p>',
+    );
+   $variables=array(
+        'path' => 'http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg',
+        'alt' => t('Magical Kitten'),
+        'title' => t("This is the title"),
+    );
+    $content['themed_data']=array(
+        '#type' => 'markup',
+        '#markup' =>  theme('image', $variables),
+        '#prefix' => '<div class="demo-image">',
+    '#suffix' => '</div>',
+        '#attatched' => array(
+            'css' => array(
+            drupal_get_path('module', 'demo') . '/demo.css',
+        ),
+            ),
+    );
+    $content['renderable_element'] = array(
+        '#theme' => 'item_list',
+        '#title' => t('Its Magic!!'),
+        '#items' => array(t('List1'),
+                           t('List2'),
+                           t('List3'),
+     t('Current time is %time() .' , array('%time' => date('r'))),
+            ),
+            '#cache' => array(
+                'keys' => array('demo', 'renderable_element'),
+                'bin' => 'cache',
+                'expire' => time()+30,
+                'granularity' => DRUPAL_CACHE_PER_PAGE,
+            ),
+      );
+return $content;
+}
