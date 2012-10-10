@@ -1,0 +1,75 @@
+<?php
+/*
+*implements hook_menu()
+*/
+function menu_magic_menu() {
+$items=array();
+$items['magic'] =array(
+'title' => 'A little magic',
+'page callback'=>'menu_magic_basic',
+'access arguments'=>array('access control'),
+);
+
+$items['magic/%'] =array(
+'title' => 'Even more magical',
+'page callback'=>'menu_magic_extra',
+'page arguments'=>array(1),
+'access arguments'=>array('access control'),
+'file'=>'menu_magic.extra.inc',
+);
+
+$items['user/%/magic'] =array(
+'title' => 'Magic',
+'description'=>'magical magic for users',
+'page callback' => 'menu_magic_user_tab',
+'page arguments'=>array(1),
+'access arguments'=>array('administer users'),
+'file'=>'menu_magic.user.inc',
+'type'=>MENU_LOCAL_TASK,
+);
+
+//node_load(%);
+$items['node/%node/magic'] =array(
+'title' => 'Magic',
+'description'=>'do amazing and magical things',
+'page callback' => 'menu_magic_code_context',
+'page arguments'=>array(1),
+'access arguments'=>array('access content'),
+'file'=>'menu_magic.context.inc',
+'type'=>MENU_LOCAL_TASK,
+'context'=> MENU_CONTEXT_PAGE | MENU_CONTEXT_INLINE,
+);
+return $items;
+}
+
+function menu_magic_basic(){
+$content= array();
+$content['raw_markup']=array(
+'#type'=>'markup',
+'#markup'=>'truly this is magical!',
+'#prefix'=>'<p>',
+'#suffix'=>'</p>',
+ );
+$variables=array(
+    'path'=>'http://www.google.com/imgres?um=1&hl=en&sa=N&biw=1280&bih=599&tbm=isch&tbnid=RU3YEr1Fe7FaqM:&imgrefurl=http://www.zigwheels.com/newcars/Volkswagen/Beetle&docid=qR0rszile6_ApM&imgurl=http://static.zigwheels.com/media/model/2012/Apr/beetle_320x240.jpg&w=320&h=240&ei=A_p0UKLJMomSrgfvxoDQBQ&zoom=1&iact=rc&dur=304&sig=115293581771800199558&page=1&tbnh=123&tbnw=173&start=0&ndsp=18&ved=1t:429,r:11,s:0,i:107&tx=63&ty=77',
+    'alt'=>t('picture'),
+    'title'=>t('this is title'),
+);
+$content['themed_data']=array(
+    '#type'=> 'markup' ,
+    '#markup'=>theme('image',$variables),
+    '#prefix'=>'<div class="menu-magic-image">',
+'#suffix'=>'</div>',
+);
+
+$content['renderable_element']=array(
+ '#theme'=>'item_list',
+ '#title'=>t('ohh its a magic'),
+ '#items'=>array(
+ t('hi'),
+ t('hello'),
+ t('how r u?'),
+ )  
+ );
+return $content;
+}

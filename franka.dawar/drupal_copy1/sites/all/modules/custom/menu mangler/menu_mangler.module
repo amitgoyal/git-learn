@@ -1,0 +1,13 @@
+<?php
+/*
+ * *implements hook_page_alter()
+ */
+function menu_mangler_page_alter(&$page) {
+  if (arg(0)== 'magic') {
+      dsm($page);
+      $page['content']['system_main']['renderable_element']['#type'] = 'ol';
+  } 
+    else {
+        echo "failed";
+    }
+}
