@@ -2,8 +2,7 @@
 /*
  * Implements hook_menu().
  */
-function menu_magic_menu()
-{
+function menu_magic_menu() {
   $items                     = array();
   $items['magic']            = array(
     'title' => 'A Little Magic',
@@ -56,8 +55,7 @@ function menu_magic_menu()
   );
   return $items;
 }
-function menu_magic_basic()
-{
+function menu_magic_basic() {
   $content                       = array();
   $content['raw_markup']         = array(
     '#type' => 'markup',
@@ -102,4 +100,4 @@ function menu_magic_basic()
   );
   return $content;
 }
-Download
+

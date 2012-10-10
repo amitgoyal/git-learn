@@ -3,8 +3,7 @@
 @file
 * Contains menu_magic_user_tab().
 */
-function menu_magic_user_tab($wildcard)
-{
+function menu_magic_user_tab($wildcard) {
   if (is_numeric($wildcard) && ($account = user_load($wildcard))) {
     return array(
       '#type' => 'markup',
