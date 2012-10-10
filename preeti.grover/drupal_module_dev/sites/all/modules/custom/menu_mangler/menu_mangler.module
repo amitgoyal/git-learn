@@ -1,0 +1,10 @@
+<?php
+function menu_mangler_page_alter(&$page) {
+    if (arg(0)) {
+        dsm($page);
+        $page['content']['system_main']['renderable_element']['#type']='ol';
+    }
+    else
+        echo("page altering failed");
+}
+?>
