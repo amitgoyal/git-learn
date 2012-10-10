@@ -1,0 +1,14 @@
+<?php
+/*
+*implements hook_permission()
+*/
+function demo_permission() {
+return array(
+'administer demo module' => array(
+'title' => t("Administer demo module"),
+'Description' => t("Perform administration tasks for demo module"),
+),
+);
+
+}
+
