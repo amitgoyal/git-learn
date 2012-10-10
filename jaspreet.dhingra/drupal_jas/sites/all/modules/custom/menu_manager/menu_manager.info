@@ -1,0 +1,3 @@
+name = Menu Manager
+description = This is a module to manage menu_magic.
+core = 7.x

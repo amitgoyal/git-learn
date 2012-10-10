@@ -1,15 +1,16 @@
 <?php
-
 /*
- * Page callback for 'user/%/magic'.
- */
-
+@file
+* Contains menu_magic_user_tab().
+*/
 function menu_magic_user_tab($wildcard) {
-if(is_numeric($wildcard) && ($account = user_load($wildcard))) {
-   return array(
-                '#type' => 'markup',
-                '#markup' => t("%username is totally awesone.",array('%username' => $account->name)),
-);
-}
-else return drupal_not_found();
-}
+  if (is_numeric($wildcard) && ($account = user_load($wildcard))) {
+    return array(
+      '#type' => 'markup',
+      '#markup' => t("%username is totally awesone.", array(
+        '%username' => $account->name
+      ))
+    );
+  } else
+    return drupal_not_found();
+} 
