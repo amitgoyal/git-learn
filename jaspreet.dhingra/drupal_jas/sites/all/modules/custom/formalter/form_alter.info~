@@ -1,0 +1,5 @@
+name = Form alter
+
+description = This module is used to alter forms.
+
+core = 7.x

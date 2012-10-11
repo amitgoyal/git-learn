@@ -1,0 +1,5 @@
+name = Menu_Magic
+
+description = This module is used to perform magic on menu items.
+
+core = 7.x

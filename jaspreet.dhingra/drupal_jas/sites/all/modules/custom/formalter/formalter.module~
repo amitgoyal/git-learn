@@ -1,0 +1,16 @@
+<?php
+
+/*
+*Implements hook_form_alter().
+*/
+
+function formalter_form_alter(&$form,&$form_states,$form_id) {
+//krumo($form_id);
+switch($form_id) {
+  case 'system_performance_settings':  
+$form['caching']['cache_lifetime']['#description'] = t('Cached pages will not be re-created until at least this much time has elapsed..and my new line would be added to it to show you');
+krumo($form);
+break;
+}
+}
+

@@ -1,0 +1,35 @@
+<?php
+/*
+*Implements hook_menu().
+*/
+
+function form_fun_menu() {
+$items = array();
+$items['form_fun/cake'] = array(
+  'title' => 'Cake or Pie',
+  'page callback' => 'form_fun_cake_page',
+  'access arguments' => array('access content'),
+  'file' => 'form_fun.cake.inc',
+  'weight' => 1,
+);
+
+$items['form_fun/tree'] = array(
+  'title' => 'Tree of forms',
+  'page callback' => 'form_fun_tree_page',
+  'access arguments' => array('access content'),
+  'file' => 'form_fun.tree.inc',
+  'weight' => 3,
+);
+
+$items['form_fun/states'] = array(
+  'title' => 'Partners in crime',
+  'page callback' => 'form_fun_states',
+  'access arguments' => array('access content'),
+  'file' => 'form_fun.states.inc',
+  'weight' => 4,
+);
+
+
+return $items;
+}
+
