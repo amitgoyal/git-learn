@@ -1,4 +1,7 @@
 <?php
+/**
+* Contains function to display user from url.
+*/
 function demo_basic_user_tab($wildcard) {
 if (is_numeric($wildcard) && ($account = user_load($wildcard))) {
 return array(
